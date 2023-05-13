@@ -34,7 +34,7 @@ model Account {
     user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
     @@unique([provider, providerAccountId])
-    @@index([userId]) // (relationMode === primsa, 在關聯式資料庫如mysql會自動會foreignkey加上index, prisma 在 建立schema的時候並不會必須自己手動添加 )
+    @@index([userId]) // (relationMode === primsa, 在關聯式資料庫如mysql會自動會foreignkey加上index, prisma 在 建立schema的時候並不會必須自己手動添加. )
 }
 
 model Session {
